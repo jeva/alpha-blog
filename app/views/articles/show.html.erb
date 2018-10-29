@@ -43,7 +43,7 @@
       <!-- Page content goes here-->
       
        <div class="col s12 m7">
-         <h2 class="header">Article Title: <%= @article.title %></h2>
+         <h2 class="header">Title: <%= @article.title %></h2>
        <div class="card horizontal">
          <div class="card-image">
            <img src="https://lorempixel.com/100/190/nature/6">
@@ -53,13 +53,15 @@
            <p><%= @article.description %></p>
          </div>
          <div class="card-action">
-           <a href="#">Edit Article</a>
+           <a <%= link_to 'Edit Article', edit_article_path %></a>
            <a href="#">Delete Article</a>
          </div>
        </div>
       </div>
     </div>
     
+     <h1 class="center-align flow-text"><%= link_to 'Back to article list', articles_path %></h1>
+      
  </div>
   
   </body>
