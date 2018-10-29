@@ -37,44 +37,30 @@
     <li><a href="mobile.html">Mobile</a></li>
   </ul>
     
-     <h1 class="center-align flow-text">Create an article</h1>
+     <h1 class="center-align flow-text">Showing selected articles</h1>
 
     <div class ="container">
       <!-- Page content goes here-->
-        
-      <% if @article.errors.any?  %>
-        <h4>The following errors prevented the article from getting created. </h4>
-        <ul class="collection">
-        <% @article.errors.full_messages.each do |msg| %>
-          <li class="collection-item"><%= msg %></li>
-        <% end %>
-        </ul>
-      <% end %>
-        
-      <%= form_for @article do |f| %>
       
-        <p>
-          <%= f.label :title %> <br/>
-          <%= f.text_field :title %>
-        </p>
-        
-        <p>
-          <%= f.label :description %> <br/>
-          <%= f.text_area :description %>
-        </p>
-        
-        <p>
-           <button class="btn waves-effect waves-light" type="submit" name="action">
-           <%= f.submit %>
-           </button>
-        </p>
-      
-      <% end %>
-      
+       <div class="col s12 m7">
+         <h2 class="header">Article Title: <%= @article.title %></h2>
+       <div class="card horizontal">
+         <div class="card-image">
+           <img src="https://lorempixel.com/100/190/nature/6">
+         </div>
+       <div class="card-stacked">
+         <div class="card-content">
+           <p><%= @article.description %></p>
+         </div>
+         <div class="card-action">
+           <a href="#">Edit Article</a>
+           <a href="#">Delete Article</a>
+         </div>
+       </div>
+      </div>
     </div>
     
-    
-    
+ </div>
+  
   </body>
 </html>
-
