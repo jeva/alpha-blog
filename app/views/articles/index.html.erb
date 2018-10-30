@@ -22,19 +22,17 @@
       <a href="#!" class="brand-logo">Logo</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Articles', articles_path %></li>
         <li><%= link_to 'About Us', aboutus_path %></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
       </ul>
     </div>
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
+     <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'Articles', articles_path %></li>
     <li><%= link_to 'About Us', aboutus_path %></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
   </ul>
     
      <h1 class="center-align flow-text">List of articles <%= link_to 'Add New', new_article_path %></h1>
@@ -56,7 +54,7 @@
          <div class="card-action">
            <a <%= link_to 'Show Article', article_path(a) %></a>
            <a <%= link_to 'Edit Article', edit_article_path(a) %></a>
-           <a href="#">Delete Article</a>
+           <a <%= link_to 'Delete Article', article_path(a) , data: { confirm: "Are you sure want to delete this article ?" }, method: :delete %></a>
          </div>
        </div>
       </div>

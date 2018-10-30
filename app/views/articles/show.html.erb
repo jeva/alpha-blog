@@ -54,7 +54,7 @@
          </div>
          <div class="card-action">
            <a <%= link_to 'Edit Article', edit_article_path %></a>
-           <a href="#">Delete Article</a>
+           <a <%= link_to 'Delete Article', article_path(@article), data: {confirm: "Are you want to delete this article ?"}, method: :delete %></a>
          </div>
        </div>
       </div>

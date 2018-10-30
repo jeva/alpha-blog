@@ -36,42 +36,20 @@
     <li><a href="collapsible.html">Javascript</a></li>
     <li><a href="mobile.html">Mobile</a></li>
   </ul>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><%= link_to 'About Us', aboutus_path %></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+  </ul>
     
      <h1 class="center-align flow-text">Edit existing article</h1>
 
     <div class ="container">
       <!-- Page content goes here-->
-              
-      <% if @article.errors.any?  %>
-        <h4>The following errors prevented the article from getting created. </h4>
-        <ul class="collection">
-        <% @article.errors.full_messages.each do |msg| %>
-          <li class="collection-item"><%= msg %></li>
-        <% end %>
-        </ul>
-      <% end %>
         
-      <%= form_for @article do |f| %>
-      
-        <p>
-          <%= f.label :title %> <br/>
-          <%= f.text_field :title %>
-        </p>
-        
-        <p>
-          <%= f.label :description %> <br/>
-          <%= f.text_area :description %>
-        </p>
-        
-        <p>
-           <button class="btn waves-effect waves-light" type="submit" name="action">
-           <%= f.submit %>
-           </button>
-        </p>
-      
-      <% end %>
-
-      <h1 class="center-align flow-text"><%= link_to 'Back to article list', articles_path %></h1>
+        <%= render 'form' %>
       
     </div>
   

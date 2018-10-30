@@ -42,6 +42,19 @@ class ArticlesController < ApplicationController
    end
   end
   
+  def destroy
+    @article = Article.find(params[:id])
+  
+    if @article.destroy
+      flash[:notice] = "Article has been succesfully deleted."
+    else
+       flash[:notice] = "Something went during during the process"
+    end
+  
+    redirect_to articles_path(@article)
+  end
+  
+  
   
   private
   
