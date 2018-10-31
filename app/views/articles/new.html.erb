@@ -1,51 +1,8 @@
-<!DOCTYPE html>
+ <h1 class="center-align flow-text">Create an article</h1>
 
-<html>
-  <head>
-    <meta name = "viewport" content="width=device-width" initial-scale="1.0" charset="UTF-8">
-    <title>Home</title>
-    
-    <script>
-
-      $(document).ready(function(){
-        $('.sidenav').sidenav();
-      });
-       
-    </script>
-    
-  </head>
-  
-  <body>
-  
-    <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'Articles', articles_path %></li>
-        <li><%= link_to 'About Us', aboutus_path %></li>
-      </ul>
-    </div>
-  </nav>
-
-  <ul class="sidenav" id="mobile-demo">
-     <li><%= link_to 'Home', root_path %></li>
-    <li><%= link_to 'Articles', articles_path %></li>
-    <li><%= link_to 'About Us', aboutus_path %></li>
-  </ul>
-    
-     <h1 class="center-align flow-text">Create an article</h1>
-
-    <div class ="container">
-      <!-- Page content goes here-->
+  <div class ="container">
+    <!-- Page content goes here-->
         
-         <%= render 'form'%>
+    <%= render 'form'%>
          
-    </div>
-    
-    
-    
-  </body>
-</html>
-
+  </div>

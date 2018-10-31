@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <meta name = "viewport" content="width=device-width" initial-scale="1.0" charset="UTF-8">
-    <title>Home</title>
-    
-    <script>
-
-      $(document).ready(function(){
-        $('.sidenav').sidenav();
-      });
-       
-    </script>
-    
-  </head>
-  
-  <body>
-  
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'Articles', articles_path %></li>
-        <li><%= link_to 'About Us', aboutus_path %></li>
-      </ul>
-    </div>
-  </nav>
-
-  <ul class="sidenav" id="mobile-demo">
-     <li><%= link_to 'Home', root_path %></li>
-    <li><%= link_to 'Articles', articles_path %></li>
-    <li><%= link_to 'About Us', aboutus_path %></li>
-  </ul>
-    
-     <h1 class="center-align flow-text">List of articles <%= link_to 'Add New', new_article_path %></h1>
+  <h1 class="center-align flow-text">List of articles <%= link_to 'Add New', new_article_path %></h1>
      
     <div class ="container">
       <!-- Page content goes here-->
@@ -45,7 +8,7 @@
          <h2 class="header">Title: <%= a.title %></h2>
        <div class="card horizontal">
          <div class="card-image">
-           <img src="https://lorempixel.com/100/190/nature/6">
+           <img src="">
          </div>
        <div class="card-stacked">
          <div class="card-content">
@@ -54,7 +17,7 @@
          <div class="card-action">
            <a <%= link_to 'Show Article', article_path(a) %></a>
            <a <%= link_to 'Edit Article', edit_article_path(a) %></a>
-           <a <%= link_to 'Delete Article', article_path(a) , data: { confirm: "Are you sure want to delete this article ?" }, method: :delete %></a>
+           <a <%= link_to 'Delete Article', article_path(a) , data: { confirm: "Are you sure want to delete #{a.title} ? " }, method: :delete %></a>
          </div>
        </div>
       </div>
@@ -62,6 +25,3 @@
     <hr>
     <% end %>
  </div>
-  
-  </body>
-</html>

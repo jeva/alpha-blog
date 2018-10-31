@@ -1,43 +1,4 @@
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <meta name = "viewport" content="width=device-width" initial-scale="1.0" charset="UTF-8">
-    <title>Home</title>
-    
-    <script>
-
-      $(document).ready(function(){
-        $('.sidenav').sidenav();
-      });
-       
-    </script>
-    
-  </head>
-  
-  <body>
-  
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><%= link_to 'About Us', aboutus_path %></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <ul class="sidenav" id="mobile-demo">
-    <li><%= link_to 'About Us', aboutus_path %></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
-  </ul>
-    
-     <h1 class="center-align flow-text">Showing selected articles</h1>
+    <h1 class="center-align flow-text">Showing selected articles</h1>
 
     <div class ="container">
       <!-- Page content goes here-->
@@ -46,7 +7,7 @@
          <h2 class="header">Title: <%= @article.title %></h2>
        <div class="card horizontal">
          <div class="card-image">
-           <img src="https://lorempixel.com/100/190/nature/6">
+           <img src="">
          </div>
        <div class="card-stacked">
          <div class="card-content">
@@ -62,7 +23,4 @@
     
      <h1 class="center-align flow-text"><%= link_to 'Back to article list', articles_path %></h1>
       
- </div>
-  
-  </body>
-</html>
+    </div>

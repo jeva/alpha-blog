@@ -1,0 +1,29 @@
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Logo</a>
+      <a  data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" id="slideout">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Articles', articles_path %></li>
+        <li><%= link_to 'About Us', aboutus_path %></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+     <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'Articles', articles_path %></li>
+    <li><%= link_to 'About Us', aboutus_path %></li>
+  </ul>
+    
+    <script>
+      $(document).ready(function(){
+        
+        
+         $('#slideout').click(function(){
+            alert("XXXX")
+            $('.sidenav').sidenav();
+         });
+       
+      });
+  </script>  
