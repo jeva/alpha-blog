@@ -4,9 +4,14 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
 
+#User password encryption
+gem 'bcrypt' , '~> 3.1.7'
+
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.7'
+
 gem 'sass-rails', '~> 5.0'
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
