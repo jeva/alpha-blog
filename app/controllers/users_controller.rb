@@ -30,7 +30,8 @@ class UsersController < ApplicationController
  end
 end 
 
-def show
+def index
+  @user = User.all
 end
 
  
